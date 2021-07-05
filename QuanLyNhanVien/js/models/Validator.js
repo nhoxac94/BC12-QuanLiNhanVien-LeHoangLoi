@@ -11,7 +11,8 @@ function Validator() {
     }
 
     this.kiemTraSo = function (value, showID, mess) {
-        if (Number.isInteger(value)) {
+        regexNum = /^[0-9]+$/
+        if (regexNum.test(value)) {
             getEle(showID).style.display = 'none';
             return true;
         }

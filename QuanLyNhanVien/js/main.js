@@ -46,6 +46,7 @@ function getAllElementsValue() {
 // Validator
 
 function validate(accountNV, nameNV, emailNV, password, ngayLam, luongCB, chucVu, gioLamTrongThang,isCheckTKNV) {
+
     var isValid = true;   
     
     isValid &= validator.kiemTraRong(accountNV, 'tbTKNV', '(*) Vui lòng nhập tài khoản nhân viên') 
@@ -85,10 +86,8 @@ function validate(accountNV, nameNV, emailNV, password, ngayLam, luongCB, chucVu
 
 // Xóa thông báo lỗi khi bật
 
-function clearErrMess () {
-    console.log(document.querySelectorAll('.form-group>span'));
+function clearErrMess () {    
     document.querySelectorAll('.form-group>span').forEach(function(mess) {
-        console.log(mess);
         mess.style.display = 'none';
     })
 }

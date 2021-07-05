@@ -1,7 +1,7 @@
 function NhanVien(taiKhoanNV, hoTenNV, emailNV, matKhau, ngayLam, luongCB, chucVu, gioLamTrongThang) {
     this.tinhTongLuong = function(chucVu) {
         var tongLuong = 0;
-        if (chucVu === 'Giám đốc') {
+        if (chucVu === 'Sếp') {
             tongLuong =  luongCB*3
         }else if (chucVu === 'Trưởng phòng'){
             tongLuong = luongCB*2
@@ -21,7 +21,7 @@ function NhanVien(taiKhoanNV, hoTenNV, emailNV, matKhau, ngayLam, luongCB, chucV
         }else if (gioLamTrongThang >= 160 ) {
             loaiNV = "Khá"
         } else {
-            loaiNV = "Kém"
+            loaiNV = "Trung Bình"
         }
         return loaiNV;
     }
