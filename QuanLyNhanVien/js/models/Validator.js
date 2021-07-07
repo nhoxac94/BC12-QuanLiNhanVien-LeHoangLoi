@@ -21,6 +21,17 @@ function Validator() {
         return false;
     }
 
+    this.kiemTraSoVaChu = function (value, showID, mess) {
+        regexNumAndChars = /^[a-zA-Z0-9_]+$/
+        if (regexNumAndChars.test(value)) {
+            getEle(showID).style.display = 'none';
+            return true;
+        }
+        getEle(showID).style.display = 'block';
+        getEle(showID).innerHTML = mess;
+        return false;
+    }
+
     this.kiemTraDoDai = function (value, showID, min, max, mess) {
         if (value.length >= min && value.length <= max) {
             getEle(showID).style.display = 'none';

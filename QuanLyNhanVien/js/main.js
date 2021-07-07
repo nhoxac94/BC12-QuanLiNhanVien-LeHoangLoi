@@ -51,7 +51,7 @@ function validate(accountNV, nameNV, emailNV, password, ngayLam, luongCB, chucVu
     
     isValid &= validator.kiemTraRong(accountNV, 'tbTKNV', '(*) Vui lòng nhập tài khoản nhân viên') 
             && validator.kiemTraDoDai(accountNV, 'tbTKNV', 4, 6, `(*) Vui lòng nhập tài khoản nhân viên gồm 4-6 kí tự`)
-            && validator.kiemTraSo(accountNV, 'tbTKNV', `(*) Vui lòng nhập tài khoản nhân viên là kí số`)
+            && validator.kiemTraSoVaChu(accountNV, 'tbTKNV', `(*) Vui lòng nhập tài khoản nhân viên gồm số và chữ`)
 
     if(isCheckTKNV === true && isValid) {              
         isValid &= validator.kiemTraTKNV(accountNV, dsnv.arr,'tbTKNV', `(*)Tài khoản nhân viên đã tồn tại`)
